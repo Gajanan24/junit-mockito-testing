@@ -92,7 +92,7 @@ public class CourseServiceTest {
         dto.setDescription("Basics");
 
         when(courseRepository.findById(1L)).thenReturn(Optional.of(course));
-        when(mapper.map(course, CourseResponseDTO.class)).thenReturn(dto); // 👈 necessary mock
+        when(mapper.map(course, CourseResponseDTO.class)).thenReturn(dto);
 
         CourseResponseDTO found = courseService.getCourseByID(1L);
 

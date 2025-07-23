@@ -18,13 +18,13 @@ import java.util.stream.Collectors;
 public class StudentService implements IStudentService {
 
     @Autowired
-    private StudentRepository studentRepository;
+    public StudentRepository studentRepository;
 
     @Autowired
-    private CourseRepository courseRepository;
+    public CourseRepository courseRepository;
 
     @Autowired
-    private ModelMapper mapper;
+    public ModelMapper mapper;
 
     @Override
     public StudentResponseDTO createStudent(StudentDTO dto) {
